@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box color change</title>
+    <style>
+        .container{
+            height: 15vh;
+            width: 90vw;
+            border: 2px solid red;
+            margin: 50px;
+            
+
+        }
+        .padding{
+            padding-left: 5px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">    </div>
+    <div class="container">    </div>
+    <div class="container">    </div>
+    <div class="container">    </div>
+    <button onclick="ithbox()" class="padding">CLICK HERE TO CHANGE THE COLOR OF THE ith BOX</button>
+
+
+
+    <script>
+        element=document.getElementsByClassName("container");
+        var theta=0;
+        function ithbox(){
+            
+        for(var x=0;x<element.length;x++){
+            element[x].style.backgroundColor="black";
+        }
+        element[theta].style.backgroundColor="white";
+        theta++;
+        theta%=element.length;
+        }
+
+    </script>
+</body>
+</html>
