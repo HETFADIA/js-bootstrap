@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themechange</title>
+</head>
+
+<body>
+
+    <h1 class="brown">IIT Ropar</h1>
+    <h2 class="brown">This button enables dark theme</h2>
+    <h2 class="brown">if you click once it becomes dark theme and then if you click again it becomes light theme and so on
+    </h2>
+    <div class="brown">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laboriosam maxime sapiente nisi, commodi amet
+        architecto natus, libero doloribus ut blanditiis illo quaerat. Temporibus velit, labore dolore error eum
+        repellat.
+
+    </div>
+    <br>
+
+
+    <button onclick="changeTheme()">Change theme</button>
+    <br>
+    <br>
+
+
+    <button onclick="changecolor()">change color of text to red</button>
+
+
+
+    <script type="text/javascript">
+        var num = 0;
+        function changeTheme() {
+            if (num % 2 == 0) {
+
+                document.querySelector("body").style.backgroundColor = "black";
+                document.querySelector("body").style.color = "white";
+                num++;
+            }
+            else {
+                document.querySelector("body").style.backgroundColor = "white";
+                document.querySelector("body").style.color = "black";
+                num++;
+            }
+
+
+        }
+        var theta=0;
+        
+        function changecolor(){
+            var element=document.getElementsByClassName("brown");
+            if(theta%2==0){
+
+            for(var x=0;x<element.length;x++){
+                element[x].style.color="brown";
+            }
+            theta++;
+            }
+            else{
+                for(var x=0;x<element.length;x++){
+                element[x].style.color="orange";
+            }
+            theta++;
+            }
+        }
+    </script>
+</body>
+
+</html>
