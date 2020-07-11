@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    
+    <h1>IIT Ropar</h1>
+    <h2>This button enables dark theme</h2>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laboriosam maxime sapiente nisi, commodi amet architecto natus, libero doloribus ut blanditiis illo quaerat. Temporibus velit, labore dolore error eum repellat.
+
+    </div>
+    <br>
+    
+
+    <button onclick="changeTheme()">Change theme</button>
+
+
+
+
+
+    <script type="text/javascript">
+        var num=0;
+        function changeTheme(){
+            if(num%2==0){
+    
+            document.querySelector("body").style.backgroundColor="black";
+            document.querySelector("body").style.color="white";
+            num++;
+            }
+            else{
+                document.querySelector("body").style.backgroundColor="white";
+            document.querySelector("body").style.color="black";
+            num++;
+            }
+    
+            
+        }
+        </script>
+</body>
+</html>
