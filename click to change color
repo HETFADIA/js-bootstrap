@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box color change</title>
+    <style>
+        .container{
+            height: 15vh;
+            width: 15.7vw;
+            border: 2px solid blue;
+            margin: 2px;
+            float: left;
+            
+
+        }
+        .padding{
+            padding-left: 2px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="ithbox(0)">    </div>
+    <div class="container" onclick="ithbox(1)">    </div>
+    <div class="container" onclick="ithbox(2)">    </div>
+    <div class="container" onclick="ithbox(3)">    </div>
+    <div class="container" onclick="ithbox(4)">    </div>
+    <div class="container" onclick="ithbox(5)">    </div>
+    <div class="container" onclick="ithbox(6)">    </div>
+    <div class="container" onclick="ithbox(7)">    </div>
+    <div class="container" onclick="ithbox(8)">    </div>
+    <div class="container" onclick="ithbox(9)">    </div>
+    <div class="container" onclick="ithbox(10)">    </div>
+    <div class="container" onclick="ithbox(11)">    </div>
+    <div class="container" onclick="ithbox(12)">    </div>
+    <div class="container" onclick="ithbox(13)">    </div>
+    <div class="container" onclick="ithbox(14)">    </div>
+    <div class="container" onclick="ithbox(15)">    </div>
+    <div class="container" onclick="ithbox(16)">    </div>
+    <div class="container" onclick="ithbox(17)">    </div>
+    <div class="container" onclick="ithbox(18)">    </div>
+    <div class="container" onclick="ithbox(19)">    </div>
+    <div class="container" onclick="ithbox(20)">    </div>
+    <div class="container" onclick="ithbox(21)">    </div>
+    <div class="container" onclick="ithbox(22)">    </div>
+    <div class="container" onclick="ithbox(23)">    </div>
+    <div class="container" onclick="ithbox(24)">    </div>
+    <div class="container" onclick="ithbox(25)">    </div>
+    <div class="container" onclick="ithbox(26)">    </div>
+    <div class="container" onclick="ithbox(27)">    </div>
+    <div class="container" onclick="ithbox(28)">    </div>
+    <div class="container" onclick="ithbox(29)">    </div>
+    <div class="container" onclick="ithbox(30)">    </div>
+    <div class="container" onclick="ithbox(31)">    </div>
+    <div class="container" onclick="ithbox(32)">    </div>
+    <div class="container" onclick="ithbox(33)">    </div>
+    <div class="container" onclick="ithbox(34)">    </div>
+    <div class="container" onclick="ithbox(35)">    </div>
+    
+    
+    
+
+
+
+    <script>
+        element=document.getElementsByClassName("container");
+        var dict=[] or// dict={}
+        for(var i=0;i<element.length;i++){
+            dict[i]=0;
+
+        }
+        console.log(dict)
+        function ithbox(theta){
+            if(dict[theta]==0){
+
+                element[theta].style.backgroundColor="black";
+                dict[theta]++;
+            }
+            else if(dict[theta]==1){
+                element[theta].style.backgroundColor="white";
+                dict[theta]--;
+            }
+        
+        
+        
+        }
+
+    </script>
+</body>
+</html>
