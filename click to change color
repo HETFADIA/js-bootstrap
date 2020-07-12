@@ -65,7 +65,7 @@
 
     <script>
         element=document.getElementsByClassName("container");
-        var dict=[] or// dict={}
+        var dict=[]
         for(var i=0;i<element.length;i++){
             dict[i]=0;
 
