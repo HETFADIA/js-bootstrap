@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 onclick="changecolor(0)" class="co">IIT Ropar</h1>
+
+    <h2 onclick="changecolor(1)" class="co">If you click once it becomes dark theme and then if you click again it
+        becomes light
+        theme and so on</h2>
+    <h2 onclick="changecolor(2)" class="co">This button below enables dark theme</h2>
+    <div onclick="change()" class="co">
+        CLICK HERE TO RESET EVERYTHING.
+
+    </div>
+    <br>
+
+
+    <button onclick="changeTheme()">Change theme</button>
+
+
+
+
+
+    <script type="text/javascript">
+        var num = 0;
+        function changeTheme() {
+            if (num % 2 == 0) {
+
+                document.querySelector("body").style.backgroundColor = "black";
+                document.querySelector("body").style.color = "yellow";
+                num++;
+            }
+            else {
+                document.querySelector("body").style.backgroundColor = "white";
+                document.querySelector("body").style.color = "black";
+                num++;
+            }
+
+
+        }
+        var increaser1 = 0
+        var increaser2 = 0
+        function changecolor(given) {
+            if (given == 0) {
+                given += increaser1;
+                increaser1++;
+                increaser1 %= 3;
+
+                given %= 3;
+                if (given == 0) {
+
+                    document.querySelector("h1").style.fontFamily = "cursive"
+                    document.querySelector("h1").style.color = "yellow";
+                    // document.querySelector("h2").style.fontFamily = "cursive"
+                    // document.querySelector("h2").style.color = "yellow";
+
+                }
+                else if (given == 1) {
+                    document.querySelector("h1").style.fontFamily = "arial"
+                    document.querySelector("h1").style.color = "pink";
+                    // document.querySelector("h2").style.fontFamily = "arial"
+                    // document.querySelector("h2").style.color = "pink";
+
+                }
+                else if (given == 2) {
+                    document.querySelector("h1").style.fontFamily = "vardana"
+                    document.querySelector("h1").style.color = "orange";
+                    // document.querySelector("h2").style.fontFamily = "vardana"
+                    // document.querySelector("h2").style.color = "orange";
+
+                }
+            }
+            else if (given == 1 | given == 2) {
+                ith = given;
+                given += increaser2;
+                increaser2++;
+                increaser2 %= 3;
+                given %= 3;
+                if (given == 0) {
+
+
+                    document.querySelector("h2").style.fontFamily = "cursive"
+                    document.querySelector("h2").style.color = "yellow";
+
+                }
+                else if (given == 1) {
+
+                    document.querySelector("h2").style.fontFamily = "arial"
+                    document.querySelector("h2").style.color = "pink";
+
+                }
+                else if (given == 2) {
+
+                    document.querySelector("h2").style.fontFamily = "vardana"
+                    document.querySelector("h2").style.color = "orange";
+
+                }
+
+            }
+
+
+        }
+        var element = document.getElementsByClassName("co")
+        var dict = {}
+        for (var i = 0; i < element.length; i++) {
+            dict[i] = 0;
+        }
+        theta = 0;
+        function change() {
+            if(dict[theta]==0){
+
+                document.querySelector("body").style.backgroundColor = "black";
+                for (var i = 0; i < element.length; i++) {
+                    // element[x].style.backgroundColor="black";
+                    element[i].style.color = "white"
+
+                }
+                dict[theta]++;
+            }
+            else if(dict[theta]==1){
+                document.querySelector("body").style.backgroundColor = "white";
+                for (var i = 0; i < element.length; i++) {
+                    // element[x].style.backgroundColor="black";
+                    element[i].style.color = "black"
+
+                }
+                dict[theta]--;
+
+            }
+            
+
+        }
+    </script>
+</body>
+
+</html>
